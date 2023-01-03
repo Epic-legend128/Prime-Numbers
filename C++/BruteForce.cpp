@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std;
 
 //takes in a number and returns true if it is prime and false otherwise, worst possible solution with O(N) time notation
 bool isPrime(int num) {
@@ -13,8 +12,8 @@ bool isPrime(int num) {
 
 int main() {
     int num;
-    cout << "Enter a number to check if it's prime or not.\n";
-    cin >> num;
-    cout << "The number you entered is "<<(isPrime(num) ? "prime" : "not prime")<< "\n";
+    std::cout << "Enter a number to check if it's prime or not.\n";
+    std::cin >> num;
+    std::cout << "The number you entered is "<<(isPrime(num) ? "prime" : "not prime")<< "\n";
     return 0;
 }
