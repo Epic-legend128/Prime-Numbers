@@ -1,6 +1,6 @@
 function gcd(a, b) {
     if(a<b) swap(a, b);
-    else if(a%b==0) return b;
+    if(a%b==0) return b;
     return gcd(b, a%b);
 }
 
@@ -9,10 +9,7 @@ function power(base, exp, n) {
     base %= n;
 
     while (exp > 0) {
-        if (exp & 1) {
-            result = (base*result)%n;
-            exp--;
-        }
+        if (exp & 1) result = (base*result)%n;
         exp>>=1;
         base=(base*base)%n;
     }
