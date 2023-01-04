@@ -19,7 +19,7 @@ function power(base, exp, n) {
 function littleTheoremOfFermat(num) {
     if (num==3||num==2) return true;
     if (num<=1||num%2==0) return false;
-    const CHECKS = 20;
+    const CHECKS = Math.min(num, 20);
     for (let i = 0; i<CHECKS; i++) {
         let current = Math.floor(Math.random()*(num-3)+2);
         if (gcd(num, current) != 1) return false;
