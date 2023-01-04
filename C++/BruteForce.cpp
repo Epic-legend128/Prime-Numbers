@@ -2,6 +2,7 @@
 
 //takes in a number and returns true if it is prime and false otherwise, worst possible solution with O(N) time notation
 bool isPrime(int num) {
+    if (num <= 1) return false;
     if (num == 2) return true;
     for (int i = 2; i<num; i++) {
         if (!(num%i)) return false;
