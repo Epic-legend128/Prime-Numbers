@@ -1,7 +1,8 @@
 #include <iostream>
 
-//a very fast solution that has a time complexity of O(n^(1/2))
+//a very fast solution that has a time complexity of O(sqrt(n))
 bool primalityTest(int num) {
+    if (num <= 1) return false;
     if (!(num%2)) return num==2;
 
     for (int i = 3; i*i<=num; i+=2) {
