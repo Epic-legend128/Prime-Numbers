@@ -5,7 +5,7 @@
 //gcd
 int gcd(int a, int b) {
     if (a<b) std::swap(a, b);
-    else if (!(a%b)) return b;
+    if (!(a%b)) return b;
     return gcd(b, a%b);
 }
 
@@ -15,10 +15,7 @@ int power(int base, int exp, int n) {
     base %= n;
 
     while(exp > 0) {
-        if(exp & 1) {
-            result=(result*base)%n;
-            exp--;
-        }
+        if(exp & 1) result=(result*base)%n;
         exp>>=1;
         base=(base*base)%n;
     }
