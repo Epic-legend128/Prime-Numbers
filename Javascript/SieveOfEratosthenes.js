@@ -6,7 +6,7 @@ function sieveOfEratosthenes(lower, upper) {
     var primes = [];
     for(let i = 2; i<=upper; i++) {
         if (isPrime[i]) {
-            primes.push(i);
+            if (i >= lower) primes.push(i);
             for (let j = i*2; j<=upper; j+=i) {
                 isPrime[j] = false;
             }
