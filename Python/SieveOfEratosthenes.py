@@ -7,7 +7,7 @@ def sieve_eratosthenes(lower, upper):
 
     for i in range(2, upper+1):
         if is_prime[i]:
-            for j in range(i*i, upper+1, i):
+            for j in range(i*2, upper+1, i):
                 is_prime[j] = False
             if i >= lower:
                 primes.append(i)
