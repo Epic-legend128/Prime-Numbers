@@ -6,7 +6,7 @@ function sieveOfEratosthenes($lower, $upper) {
     $primes = [];
     for ($i = 2; $i <= $upper; $i++) {
         if ($is_prime[$i] == true) {
-            for ($j = $i*2; $j<=$upper; $j+=$i) {
+            for ($j = $i*$i; $j<=$upper; $j+=$i) {
                 $is_prime[$j] = false;
             }
             if ($i>=$lower) array_push($primes, $i);
