@@ -12,7 +12,7 @@ int* sieve_of_eratosthenes(const int lower, const int upper) {
     int amount = 0;
     for (int i = 2; i<=upper; i++) {
         if (is_prime[i]) {
-            for (int j = i*2; j<=upper; j+=i) {
+            for (int j = i*i; j<=upper; j+=i) {
                 is_prime[j] = false;
             }
             if (i >= lower) amount++;
