@@ -11,7 +11,7 @@ public class Main {
         ArrayList<Integer> primes = new ArrayList<Integer>();
         for (int i = 2; i<=upper; i++) {
             if (isPrime[i]) {
-                for (int j = i+i; j<=upper; j+=i) {
+                for (int j = i*i; j<=upper; j+=i) {
                     isPrime[j] = false;
                 } 
                if (i >= lower) primes.add(i);
