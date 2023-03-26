@@ -14,7 +14,7 @@ namespace SieveOfEratosthenes {
             List<int> Primes = new List<int>();
             for (int i = 2; i<=upper; i++) {
                 if (IsPrime[i]) {
-                    for (int j = i*2; j<=upper; j+=i) {
+                    for (int j = i*i; j<=upper; j+=i) {
                         IsPrime[j] = false;
                     }
                     if (i >= lower) Primes.Add(i);
