@@ -28,3 +28,8 @@ a^(p-1) ≡ 1 (mod p)
 What we do is that we check if this equality holds true for many different random values of a where 1 < a < p-1 and a not a divisor of p. If the equality holds true then number p is probably a prime. The more tests you do the more sure you are that your result is correct.
 <br>
 The time notation that this algorithm has is <b>O(klogn)</b> where k is the amount of checks you make and n is the number you are checking.
+
+# Segmented Sieve and Incremental Sieve
+Both of these 2 sieves are just optimised versions of the sieve of Eratosthenes. Segmented sieve has the advantage that it takes up less space than the normal sieve of Eratosthenes. It has the same asymptotic time notation as the sieve of Eratosthenes, O(n*log(log(n))), however its space complexity is O(n^(1/2)) where n is the upper boundary of the algorithm.
+<br>
+The Incremental sieve is also used to save up space as it only stores prime numbers in its array. Its time complexity remains the same as the sieve of Eratosthenes, and its space complexity is O(n^(1/2)) where n is the upper boundary of the algorithm.
